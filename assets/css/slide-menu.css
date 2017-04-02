@@ -141,7 +141,7 @@ section{
 }
 .block.less-space{padding:40px 0}
 .block .container{padding:0;width:1080px}
-.container{padding:0;width:1080px}
+.container{padding:0;/*width:1080px*/}
 .block.remove-gap{padding-top:0}
 .block.no-padding{
     padding-top:0;

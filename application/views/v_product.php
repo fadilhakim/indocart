@@ -2,7 +2,7 @@
     <div class="row">
         <?php foreach ($product_cat as $category) { ?>
             <div class="col-lg-12"> 
-                <h1 style="padding-left:3%" class="f-gotham-medium"><?php echo $category->category_title; ?></h1>
+                <h1 class="f-gotham-medium"><?php echo $category->category_title; ?></h1>
             </div>
         <?php } ?>
 

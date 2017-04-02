@@ -1,20 +1,33 @@
-<div class="container">
-	<div class="row list-view">
+<div class="container list-view">
+	<div class="row">
 		<?php foreach ($product_cat as $category) { ?>
-            <div class="col-lg-12"> 
-                <h1 style="padding-left:3%" class="f-gotham-medium"><?php echo $category->category_title; ?></h1>
+            <div class="col-lg-12">
+            	<div class="row">
+            		<div class="col-lg-10">
+            			<h1 class="f-gotham-medium"><?php echo $category->category_title; ?></h1>
+            		</div>
+            		<div class="col-lg-2">
+            			<div class="grid">
+            				<a style="display:block; height:35px; width:35px;" href="<?php echo base_url('product/'.$category->category_url.'/1' ); ?>"></a>
+            			</div>
+            			<div class="list">
+            				<a style="display:block; height:35px; width:35px;" href="<?php echo base_url('product-list/'.$category->category_url.'/1' ); ?>"></a>
+            			</div>
+            		</div>
+            	</div> 
+                
             </div>
         <?php } ?>
 		<div class="col-lg-12">
 
-			 <div class="table-responsive">
-			  <table class="table-striped">
+			<div class="table-responsive">
+			  <table class="table">
 			    <thead>
 			    	<tr>
-			    		<td>Nama Produk</td>
-			    		<td>UOM</td>
-			    		<td>Description</td>
-			    		<td></td>
+			    		<th class="th-name">Nama Produk</th>
+			    		<th class="th-uom">UOM</th>
+			    		<th class="th-desc">Description</th>
+			    		<th class="th-action"></th>
 			    	</tr>
 			    </thead>
 			    <tbody>
@@ -30,6 +43,7 @@
 			                  <input type="hidden" name="product_image" value="<?php echo $p->product_image_1?>">
 			                  <input type="hidden" name="product_category" value="<?php echo  $p->product_category ?>">
 			                  <input type="submit" class="add-to-cart1" value="Add To Cart">
+			                  <div class="cart-icon"></div>
 			              <?php echo form_close(); ?>
 			             </td>
 			    	</tr>
@@ -39,5 +53,19 @@
 			</div> 
 		</div>
 	</div>
+
+	 <div class="row">
+        <div class="col-lg-6 pagination">
+
+            <?php echo $links; ?>
+        </div>
+        <div class="col-lg-6">
+            <div class="checkout-big">
+                <a href="<?php echo base_url('cart/show_cart'); ?>">
+                    
+                </a>
+            </div>
+        </div>
+    </div>
 
 </div>
