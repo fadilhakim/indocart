@@ -1,14 +1,12 @@
 <div class="home-container">
 	<div class="container">
 	
-			<div id="owl-demo" class="owl-carousel">
-				 <div><img src="http://placehold.it/1170x300/42bdc2/FFFFFF"></div>
-              <div><img src="http://placehold.it/1170x400/42bdc2/FFFFFF"></div>
-              <div><img src="http://placehold.it/1170x500/42bdc2/FFFFFF"></div>
-              <div><img src="http://placehold.it/1170x200/42bdc2/FFFFFF"></div>
-			</div>
+		<div id="owl-demo" class="owl-carousel">
+			<?php foreach ($slider as $s) { ?>
+			 <div><img src="<?php echo sprintf("assets/images/slider/". $s->silder_image) ?> "></div>
+			<?php } ?>
+		</div>
 				
-		
 	</div>
 	
 	<div class="container content home">
@@ -17,7 +15,7 @@
 				<img src="<?php echo base_url('assets/images/home/xerox-dp-c1190.png'); ?>" class="img-responsive">
 			</div>
 			<br><br>
-			<div class="row" style="margin-top: 110px;">
+			<div class="row mt-110">
 				<img src="<?php echo base_url('assets/images/home/tinta.png'); ?>" class="img-responsive">
 			</div>
 			<br><br>
@@ -52,7 +50,7 @@
 				Telah berdiri sejak 2003 dengan layanan purna jual yang responsif, professional dan berkesinambungan.
 				</p>
 				
-				<div style="margin-top:20px; height:380px;">
+				<div style="margin-top:20px;" class="mt-380">
 					<img src="<?php echo base_url('assets/images/home/printer-parts.png'); ?>" class="img-responsive">
 				</div>
 				<div style="margin-top:20px;">
@@ -92,13 +90,18 @@
 	<div class="container-fluid recycle">
 		<div class="row">
 			<div class="col-lg-5">
-				<p class="f-roboto-reg ">Proses daur ulang katrid yang benar dan proses pengerjaan yang sesuai standar secara nyata sangat membantu menciptakan lingkungan yang lebih bersih.<br><br>
-					Bila anda memiliki katrid kosong yang tidak terpakai, anda dapat menghubungi kami pada program pengumpulan katrid kosong. Semua katrid kosong akan dipilah dan didaur ulang agar tidak menjadi limbah yang mencemari lingkungan. <br><br>
-					INDOCART menerima setiap katrid kosong anda, virgin maupun non virgin dengan harga yang pantas. Seluruh katrid kosong didaur ulang dengan proses dan perlengkapan yang memenuhi standarisasi sehingga tidak mencemari lingkungan.<br><br>
-				</p>
+				<div class="col-lg-3">
+					<img class="img-responsive" src="<?php echo base_url('assets/images/home/rec-bg.png') ?>">
+				</div>
+				<div class="col-lg-9">
+					<p class="f-roboto-reg ">Proses daur ulang katrid yang benar dan proses pengerjaan yang sesuai standar secara nyata sangat membantu menciptakan lingkungan yang lebih bersih.<br><br>
+						Bila anda memiliki katrid kosong yang tidak terpakai, anda dapat menghubungi kami pada program pengumpulan katrid kosong. Semua katrid kosong akan dipilah dan didaur ulang agar tidak menjadi limbah yang mencemari lingkungan. <br><br>
+						INDOCART menerima setiap katrid kosong anda, virgin maupun non virgin dengan harga yang pantas. Seluruh katrid kosong didaur ulang dengan proses dan perlengkapan yang memenuhi standarisasi sehingga tidak mencemari lingkungan.<br><br>
+					</p>
+				</div>
 			</div>
-			<div class="col-lg-7 right">
-				
+			<div class="col-lg-7">
+				<img class="img-responsive" src="<?php echo base_url('assets/images/home/recycle.png') ?>">	
 			</div>
 		</div>
 	</div>

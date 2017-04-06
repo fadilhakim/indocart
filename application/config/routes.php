@@ -24,6 +24,9 @@ $route['product-list/(:any)/(:num)'] = 'product/view_list';
 $route['product/detail/(:any)/(:any)/(:num)'] = 'product/detail/$1/$2/$3';
 
 
+$route['product-search'] = 'product/search';
+
+
 $route['news'] = 'news';
 $route['news/detail/(:num)'] = 'news/detail/$1';
 

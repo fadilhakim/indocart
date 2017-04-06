@@ -121,7 +121,6 @@ ul{
     font-size:16px;
     line-height:26px;
     list-style:disc;
-    padding-bottom:30px;
     padding-left:70px;
     text-align:left;
     width:100%;
@@ -173,7 +172,6 @@ iframe{
     width:100%;
     float:left;
 }
-img{float:left}
 /*=============== Cross Browser Compatibility ===================*/
 a,
 nav ul ul,
@@ -1355,7 +1353,7 @@ blockquote:after{
 }
 
 form{
-    float:left;
+
     width:100%;
 }
 form input, form textarea{

@@ -177,43 +177,15 @@ class product extends CI_Controller {
 
 	}
 
-	public function manufacturer($manu) {
-
-		$this->load->view('templates/meta');
-		$this->load->view('templates/header');
-
-		$manu=$this->uri->segment(3);
-		$page = 'product_manufacturer';	
-		$data['category'] = $this->model_product->list_category()->result();
-
-		$this->load->model('model_manufacturer');
-		$data['manu'] = $this->model_manufacturer->list_manufacturer()->result();
-
-		$getmanu = $this->model_manufacturer->getproductbyManufacturer($manu);
-		$data['product'] = $getmanu;
-
-		$getmanuname = $this->model_manufacturer->getnameManufacturer($manu);
-		$data['manuname'] = $getmanuname;
-
-		$this->load->view($page, $data);
-		$this->load->view('templates/footer');
-	}
-
 	public function search(){
 
-		$this->load->view('templates/meta');
-		$this->load->view('templates/header');
-		$data['category'] = $this->model_product->list_category()->result();
-
-		$this->load->model('model_manufacturer');
-		$data['manu'] = $this->model_manufacturer->list_manufacturer()->result();
-		$keyword=$this->uri->segment(3);
+		$this->load->view('templates/v_t_meta');
+		$this->load->view('templates/v_t_header');
+		$keyword=$this->uri->segment(2);
 		$keyword    =   $this->input->post('keyword');
         $data['results']    =   $this->model_product->searchProduct($keyword);
-        $this->load->view('search_result',$data);
-        $this->load->view('templates/footer');
-
-
+        $this->load->view('v_search_result',$data);
+        $this->load->view('templates/v_t_footer');
 	}
 }
 

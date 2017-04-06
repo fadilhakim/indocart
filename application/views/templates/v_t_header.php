@@ -2,7 +2,7 @@
 	<?php $this->load->view('templates/v_t_menu'); ?>
 	<div class="container header" style="position:relative;">
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-6 icon-div">
 				<div class="menu-icon">
 					<a class="sidemenu-btn fa fa-bars" href="#" title=""></a>
 				</div>
@@ -17,7 +17,9 @@
 						
 					</i>
 				</a>
-				<input type="text" placeholder="search">
+				<form class="" action="<?php echo base_url('product-search'); ?>"  method="post">
+					<input type="text" name="keyword" placeholder="search">
+				</form>
 				<?php if($this->cart->contents()){ ?>
 					<div class="red-one"><?php echo count($this->cart->contents()); ?></div>
 				<?php } ?>

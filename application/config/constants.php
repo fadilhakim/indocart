@@ -83,3 +83,11 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+// DATA BESHA ANALITIKA
+define("TITLE","Indocart");
+define("NO_TELP","021 5315-8800");
+define("PHONE","0813 9835 5678");
+define("ADDRESS","MANGGA DUA");
+define("INFO_EMAIL","sales1@indocart.com");
+define("ABOUT_US","INDOCART adalah perusahaan yang bergerak dalam bidang printer dan perlengkapannya. Hadir untuk memenuhi permintaan akan katrid daur ulang (toner & ink cartridge) beserta suku cadang dan kelengkapannya yang terus berkembang. Dengan peralatan lengkap dan dukungan penuh dari pabrikan, INDOCART berkomitmen menjual dan menyalurkan hanya produk berkualitas tinggi dengan harga kompetitif. Selain mendistribusikan barang, kami juga memberikan dukungan teknis dan solusi.");

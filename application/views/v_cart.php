@@ -13,10 +13,11 @@
     <div class="col-md-10 col-md-offset-1 tables">
         
         <h1>Terima kasih untuk pesananan anda</h1>
+          <div class="table-responsive">
           <form method="post" action="<?php echo base_url('cart/update_cart'); ?>">
-              <table>
+              <table class="table table-striped">
                 <thead>
-                    <tr>
+                    <tr style="border-bottom: 1px solid #ccc;">
                         <th class="table-title">Nama Produk</th>
                         <th class="table-title">Deskripsi</th>
                         <th class="table-title">UOM</th>
@@ -43,11 +44,20 @@
                 </tbody>
               </table>
           </form>
+          </div>
         
     </div>
 
+    <div class="col-md-3 col-md-offset-8 ">
+      <div class="subtotal-cart ">
+          <p class="f-gotham-medium">Subtotal</p>
+          <input type="text" readonly="" value="<?php echo count($this->cart->contents()); ?>">
+      </div>
+          
+    </div>
+
     <div class="col-lg-10 col-lg-offset-1 form">
-      <form style="margin-top:20px" class="form-contact" method="post" action="request">
+      <form style="margin-top:20px" class="form-contact" method="post" action="<?php echo base_url("cart/send_email_invoice"); ?>">
           <div class="row">
             <div class="col-lg-6">
               <div class="row">

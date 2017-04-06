@@ -1,8 +1,21 @@
 <div id="" class="container product-list">
     <div class="row">
         <?php foreach ($product_cat as $category) { ?>
-            <div class="col-lg-12"> 
-                <h1 class="f-gotham-medium"><?php echo $category->category_title; ?></h1>
+           <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-10">
+                  <h1 class="f-gotham-medium"><?php echo $category->category_title; ?></h1>
+                </div>
+                <div class="col-lg-2">
+                  <div class="grid">
+                    <a style="display:block; height:35px; width:35px;" href="<?php echo base_url('product/'.$category->category_url.'/1' ); ?>"></a>
+                  </div>
+                  <div class="list">
+                    <a style="display:block; height:35px; width:35px;" href="<?php echo base_url('product-list/'.$category->category_url.'/1' ); ?>"></a>
+                  </div>
+                </div>
+              </div> 
+                
             </div>
         <?php } ?>
 
@@ -11,7 +24,7 @@
             <div class="thumbnail">
               
               <a href="<?php echo base_url('product/detail/').$p->product_slug.'/'.$p->category_url.'/'.$p->product_id; ?>">
-              <div style="width:100%; height:250px;">
+              <div style="width:100%; max-height:260px; overflow:hidden;">
                 <?php if($p->product_image_1 == '') { ?>
                     <img class="img-responsive center-block" style="margin-bottom:0px;" src="<?php echo base_url('assets/images/no-image.png')?>">
                 <?php }else { ?>
@@ -19,10 +32,24 @@
                 <?php } ?><br>
               </div>
                 <div class="caption">
-                  <p style="padding-left:5%; height:60px; over-flow:hidden;"><?php echo $p->product_title; ?></p>
-                  <span style="padding-left:5%; display:block;">
+                  <p style="padding-left:5%; height:35px; over-flow:hidden;">
+                     <?php 
+                        if (strlen($p->product_title) <= 30 ) {
+                          echo $p->product_title;
+                        } else {
+                          echo substr($p->product_title , 0, 30) . '...';
+                        };  
+                    ?>
+                  </p>
+                  <span style="padding-left:5%; display:block; min-height:50px;">
                       <?php echo $p->product_descrption; ?>
                   </span>
+                  <span> 
+                    <?php
+                        if($p->uom !== ' - '){ ?>
+                            <strong style='padding-left:5%; display:block;'>UOM : <?php echo $p->uom; ?> </strong>
+                      <?php  } ?>
+                  </span> 
                 </div>
               </a>
               <?php echo form_open('cart/add_cart_item'); ?>

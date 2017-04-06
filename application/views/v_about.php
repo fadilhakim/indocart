@@ -7,24 +7,25 @@
 
 	    <div class="row">
 	    	<div class="col-lg-6 main-about-img">
-	    		<img class="img-responsive" src="<?php echo base_url('assets/images/about/main-image-about-us2.png'); ?>">
+	    		<img class="img-responsive" src="<?php echo base_url('assets/images/about/pabrik.png'); ?>">
 	    	</div>
 	    	<div class="col-lg-6">
 	    		<div class="row">
 	    			<div class="col-lg-12">
 	    				<h1 class="f-gotham-medium">about us</h1>
-	    				<p>NDOCART adalah perusahaan yang bergerak dalam 
-							bidang printer dan perlengkapannya. 
-							<br><br>
+	    				<p>INDOCART adalah perusahaan yang bergerak dalam 
+							bidang printer dan perlengkapannya.</p>
+							<p>
 							Hadir untuk memenuhi permintaan akan katrid daur 
 							ulang (toner & ink cartridge) beserta suku cadang dan 
-							kelengkapannya yang terus berkembang.
-							<br><br>
+							kelengkapannya yang terus berkembang.</p>
+							<p>
 							Dengan peralatan lengkap dan dukungan penuh dari 
 							pabrikan, INDOCART berkomitmen menjual dan 
 							menyalurkan hanya produk berkualitas tinggi dengan 
 							harga kompetitif. Selain mendistribusikan barang, 
 							kami juga memberikan dukungan teknis dan solusi.
+							</p>
 						</p>
 	    			</div>
 	    			<div class="col-lg-12">

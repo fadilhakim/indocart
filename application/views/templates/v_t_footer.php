@@ -3,11 +3,12 @@
 	<div class="footer">
 		<div class="row">
 			<div class="col-lg-6">
-				<p>021 5315-8800 (Hunting)</p>
-				<p>021 5315-8880</p>
-				<p>indocart@indosat.net.id</p>
+				<p style="font-size:14px;">BSD : 021 5315-8800 (Hunting)</p>
+				<p style="font-size:14px;">MANGGA DUA : 021 612 7270 | 021 6220 2664</p>
+        <p style="font-size:14px;">HI-TECH MALL : 0813 9835 5678</p>
+				<p style="font-size:14px;">indocart@indosat.net.id</p><br>
 				<a href=""  data-toggle="modal" data-target="#myModal" class="subscribe">Subscribe our latest promo & Deals</a>
-				<p>&copy; All right reserved - indocart</p>
+				<p style="font-size:11px;">&copy; All right reserved - indocart</p>
 
 			</div>
 			<div class="col-lg-6">
@@ -21,16 +22,16 @@
 						<br>
 					</div>
 					<div class="col-lg-3">
-						<img src="<?php echo base_url('assets/images/footer-img-1.png'); ?>">
+						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-1.png'); ?>">
 					</div>
 					<div class="col-lg-3">
-						<img src="<?php echo base_url('assets/images/footer-img-2.png'); ?>">
+						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-2.png'); ?>">
 					</div>
 					<div class="col-lg-3">
-						<img src="<?php echo base_url('assets/images/footer-img-3.png'); ?>">
+						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-3.png'); ?>">
 					</div>
 					<div class="col-lg-3">
-						<img src="<?php echo base_url('assets/images/footer-img-4.png'); ?>">
+						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-4.png'); ?>">
 					</div>
 				</div>
 			</div>

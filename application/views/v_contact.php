@@ -8,20 +8,17 @@
 		<div class="col-lg-6 bg-contact">
 			<h1 class="contact-text">contact us</h1>
 		</div>
-		<div class="col-lg-6">
-			<h2 class="f-gotham-bold">RUKO GOLDEN BOULEVARD,<br> BLOK I, NO. 9-11, BSD</h2>
-			<ul>
-				<li>5315 8800 / 5315 8880 (hunting)</li>
-				<li>0852 8396 5099</li>
-				<li>54257C52</li>
-			</ul>
-			<br><br><br>
-			<h2>HARCO MANGGA DUA, BLOK B, LT. 2, NO. 47/34/10</h2>
-			<ul>
-				<li>612 7270 / 6220 2664</li>
-				<li>0852 8396 5099</li>
-				<li>54257C52</li>
-			</ul>
+		<div class="col-lg-6 img-contact">
+			<div class="row">
+				<div class="col-lg-12">
+				<img src="<?php echo base_url('assets/images/contact/top-contact.png') ?>" class="img-responsive">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+				<img src="<?php echo base_url('assets/images/contact/blue-contact.png') ?>" class="img-responsive" style="margin-top:30px;">
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

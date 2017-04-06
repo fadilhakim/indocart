@@ -34,7 +34,9 @@
 			    	<?php foreach ($product as $p) { ?>
 			    	<tr>
 			    		<td><p><?php echo $p->product_title; ?></p></td>
-			    		<td></td>
+			    		<td>
+                           <?php echo $p->uom; ?>
+			    		</td>
 			    		<td><p> <?php echo $p->product_descrption; ?></p></td>
 			    		<td> <?php echo form_open('cart/add_cart_item'); ?>
 			                 <input type="hidden" name="product_id" value="<?php echo $p->product_id;?>">

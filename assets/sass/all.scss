@@ -123,14 +123,38 @@ body {
 	}
 
 	.recycle {
-		background:url('../../assets/images/home/rec-bg.png') left top no-repeat;
-		// max-height:420px;
-		.right{
-
-			background:url('../../assets/images/home/recycle.png') no-repeat;
-			height: 440px;
+		
+		p {
+			font-size: 14.5px;
+		}
+		.col-lg-5 {
+			padding-left: 0px;
+			padding-right:0px;
+			.col-lg-3 {
+			    min-height: 424px;
+			    padding-left: 0px;
+			    padding-right: 0px;
+			    background-color:#01a574;
+			}
+		}
+		.col-lg-9 {
+			padding-right:0px;
+			padding-left: 0px;
+			min-height: 424px;
+			background-color: #f7f7f7;
+		}
+		.col-lg-7 {
+			padding-right:0px;
+			padding-left: 0px;
 		}
 	}
+}
+
+.mt-110 {
+	margin-top: 110px
+}
+.mt-380 {
+	margin-top:380px;
 }
 
 // CSS ABOUT
@@ -141,10 +165,16 @@ body {
 	}
 	p {
 		font-family: 'roboto-reg';
+
 			
 	}
+	.col-lg-6 {
+		p {
+			font-size: 14px;
+		}
+	}
 	.box-gray {
-		height:300px;
+		height:340px;
 		width:100%;
 		background-color:#e3e3e3;
 		position: absolute;
@@ -183,7 +213,7 @@ body {
 	.bg-contact {
 		background:url(../../assets/images/contact/contact_bg.png) no-repeat right 100px;
 		height: 400px;
-		border-right:1px solid red;
+		
 		h1 {
 			font-family: 'gotham-medium';
 		}
@@ -194,7 +224,7 @@ body {
 
 #product-cat {
 
-	background : url('../../assets/images/product-cat/wave.png') no-repeat 0 center;
+	background : none !important;
 	h1{
 		font-size: 35px;
 		font-size: 45px;
@@ -203,10 +233,9 @@ body {
 	}
 	.guarantee {
 		position:relative;
-		height: 100px;
+		min-height: 100px;
 		background-color:#c41a1c;
 		h2 {
-			padding-left: 100px;
 			color: #fff;
 			font-size: 53px;
 			padding-left: 17%;
@@ -229,12 +258,13 @@ body {
 	}
 	.option {
 		background-color: #353535;
-		height: 160px;
+		min-height: 160px;
 		padding-top: 30px;
 		p {
 			color: #fff;
 			font-family: 'gotham-medium';
 			text-align: center;
+			font-size: 14px;
 		}
 		img {
 			display: block;
@@ -343,9 +373,6 @@ body {
 	}
 }
 
-.recycle {
-	padding-left:140px;
-}
 
 .sidemenu {
 	background:none;
@@ -397,7 +424,7 @@ body {
 	border-radius:3px;
 	padding:5px;
 	display:block;
-	width:48%;
+	width:55%;
 	text-align:center;
 }
 
@@ -405,6 +432,25 @@ body {
 	background:url("../../assets/images/products/product-bg.png") no-repeat 40% center;
 	border-top:none !important;
 	padding-top:40px;
+}
+.thankyou {
+	background:url("../../assets/images/products/product-bg.png") no-repeat 40% center;
+	p {
+		font-size: 30px;
+		padding-top:100px;
+		line-height: 50px;
+	}
+	a {
+		background-color:#c41a1c;
+		display: block;
+		margin: auto;
+		width: 200px;
+		color: #fff;
+		text-align: center;
+		padding: 20px;
+		border-radius:4px;
+		line-height: 30px;
+	}
 }
 
 .thumbnail {
@@ -441,13 +487,37 @@ body {
 		height: 30px; 
 		background: url("../../assets/images/products/cart-red.png") no-repeat 0 center;
 		line-height: 30px;
-		margin-left: 30px;
+		margin-left: 22px;
 		border:none;
 		text-align: left;
 		padding: 0 0 0px 40px;
 	}
 }
 
+.subtotal-cart {
+	width:100%;
+	height:30px;
+	color:#fff;
+	background-color:#727272;
+	border-radius:2px;
+
+	input {
+		border:none;
+		color: #000;
+		float: right;
+		height: 25px;
+		border-radius:3px;
+		margin-top:2px;
+		margin-right: 3px;
+		text-align: center;
+		width: 120px;
+	}
+	p {
+		color:#fff;
+		display: inline-block;
+		padding:3px 0px 0 10px;
+	}
+}
 .checkout-big {
 	background:url('../../assets/images/products/checkout-big.png');
 	background-size:cover;
@@ -660,27 +730,29 @@ body {
 	}
 }
 
-.list-view {
-	padding-top:50px;
-	background:url("../../assets/images/products/product-bg.png") no-repeat 56% 80%;
-	h1 {
-		margin-bottom: 30px;
-	}
-	.grid {
+.grid {
 		background: url("../../assets/images/products/trim.png") no-repeat 0 center;
 		height: 35px;
 		width: 35px;
 		float: right;
 		margin-top: 20px;
 	}
-	.list {
-		background: url("../../assets/images/products/list.png") no-repeat 0 center;
-		height: 35px;
-		width: 35px;
-		float: right;
-		margin-top: 20px;
-		margin-right: 10px;
+.list {
+	background: url("../../assets/images/products/list.png") no-repeat 0 center;
+	height: 35px;
+	width: 35px;
+	float: right;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.list-view {
+	padding-top:50px;
+	background:url("../../assets/images/products/product-bg.png") no-repeat 56% 80%;
+	h1 {
+		margin-bottom: 30px;
 	}
+	
 	.table-striped {
 		padding-left:30px;
 		padding-right:30px;
@@ -725,4 +797,14 @@ body {
 	    overflow: hidden;
 	    outline:none;
 	}
+}
+
+.img-contact {
+	padding:50px 0 0 60px;
+	border-left:1px solid red;
+}
+
+.contact-content {
+	border-bottom:3px solid red;
+	margin-top:40px;
 }

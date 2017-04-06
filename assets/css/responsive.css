@@ -1,5 +1,107 @@
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
+	.container {
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}
+	.header .cart-icon {
+	    top: -32px;
+		left: 87%;
+	}
+	.footer {
+		background:none;
+	}
+	.contact-page .bg-contact { 
+		height: 60px;
+		background: none;
 
+	}
+	.contact-page .bg-contact h1 {
+		font-size: 50px;
+	}
+	.contact-page .img-contact {
+		padding:40px 15px 50px 15px;
+		border:none;
+	}
+
+	.header input {
+		float: none;
+		margin-top: 15px;
+		width: 100%;
+	}
+
+	#product-cat .memphis {
+		display: none;
+	}
+	#product-cat .persen {
+		display: none;
+	}
+	#product-cat .guarantee h2 {
+		font-size: 30px;
+		padding-left: 0px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: center;
+
+	}
+	.kerilwil {
+		display: none;
+	}
+	.red-one {
+		top: -39px;
+		right: 0px;
+	}
+	.info {
+	    padding-top: 0px;
+	    width: 100%;
+	}
+	#product-cat h1 {
+		padding-top: 0px;
+		text-align: center;
+		font-size: 32px;
+	}
+	.product-list {
+		padding-top: 0px;
+	}
+	.product-list h1 {
+		text-align: center;
+		font-size: 25px;
+	}
+	.footer .col-lg-3{
+		margin-bottom: 30px;
+	}
+	#product-cat .col-lg-6 {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	.icon-div {
+		height: 35px;
+	}
+	.box-gray {
+		display: none;
+	}
+	.home-container .why-us {
+		background: none;
+	}
+	.home-container .why-us h2 {
+		font-size: 42px;
+	}
+	.home-container p {
+		padding-left: 0px;
+	}
+
+	.home-container .mt-170 {
+		margin-top: 10px;
+	}
+	.mt-110 {
+		margin-top: 10px;
+	}
+	.mt-380 {
+		margin-top:380px;
+	}
+
+	.home-container .recycle p  {
+		padding-left: 10px;
+	}
 }
 
 @media (min-width: 768px) {

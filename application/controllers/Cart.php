@@ -109,5 +109,82 @@ class cart extends CI_Controller { // Our Cart class extends the Controller clas
     	$this->cart->destroy(); // Destroy all cart data
     	redirect('products/all'); // Refresh te page
 	}
+
+	function send_email_invoice()
+
+	{
+
+		// $this->load->model("model_user");
+		$this->load->helper('check_data');
+		$this->load->model("model_product");
+
+		// $user_session = $this->session->all_userdata();
+		$name = $this->input->post('name');
+		$hp = $this->input->post('hp');
+		$address = $this->input->post('address');
+		$email = $this->input->post('email');
+		$keterangan = $this->input->post('keterangan');
+
+		$dt_stat = "error";
+
+		$dt_msg  = '<div class="alert alert-danger alert-dismissable">
+
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+
+						Silakan login terlebih dahulu
+
+					</div>';
+
+			$date = date("d-m-Y"); 
+
+			$name_pdf = "Surat Permintaan Barang $date.pdf";
+
+			// $data["user_sess"] = $user_session;
+
+			$data["name_pdf"] = $name_pdf;
+			$data['name'] = $name;
+			$data['email'] = $email;
+			$data['keterangan'] = $keterangan;
+			$data['address'] = $address;
+
+
+			$html =  $this->load->view("invoice/invoice-fancy-page-inline",$data,true); 
+			$from_email =  $email ;
+			
+			$to_email = "sales1@indocart.com";
+
+			$subject = "$name_pdf";
+
+			$message = $html;
+			
+			$config['protocol']  = 'smtp';
+			$config['mailtype']  = 'html';
+			$config['priority']  = '1';
+			$config['charset']   = 'iso-8859-1';
+			$config['newline']   = "\r\n"; //use double quotes*/
+			$config['wordwrap']  = TRUE;
+			$config['smtp_host'] = 'ssl://indocart.com';
+			$config['smtp_port'] = 465;
+			$config['smtp_user'] = 'sales1@indocart.com';
+			$config['smtp_pass'] = 'Sales182';
+
+			$this->email->initialize($config);
+
+			//send mail
+			$this->email->from($from_email, 'Sales Indocart');
+			$this->email->to($to_email);
+			$this->email->subject($subject);
+			$this->email->message($message);
+			$this->email->send();
+
+			redirect("cart/thankyou");
+	}
+
+	function thankyou() {
+		$this->load->view('templates/v_t_meta');
+		$this->load->view('templates/v_t_header');
+    	$this->load->view('v_thankyou');
+    	$this->load->view('templates/v_t_footer');
+	}
  
 }

@@ -7,7 +7,7 @@ foreach($product->result() as $row){
   $price=$row->price;
   $product_code=$row->product_code;
   $product_category=$row->product_category;
-
+  $uom=$row->uom;
   $product_image_1=$row->product_image_1;
 
 }
@@ -21,20 +21,25 @@ foreach($product->result() as $row){
         <h1 class="f-gotham-medium" style="border-bottom:1px solid #000; font-size:30px; 
         text-transform:uppercase; padding:35px 0 15px 0;">Product</h1>
 
-      	<div class="col-lg-4">
+      	<div class="col-lg-5">
               
       		
       		<?php if($product_image_1 == '') { ?>
-      			<img class="img-responsive center-block" style="height: 220px; margin-bottom: 35px; margin-top:35px" src="<?php echo base_url('assets/images/no-image.png')?>">
+      			<img class="img-responsive center-block" style="margin-bottom: 35px; margin-top:35px" src="<?php echo base_url('assets/images/no-image.png')?>">
       		<?php }else { ?>
-      			<img class="img-responsive center-block" style="height: 220px; margin-bottom: 35px; margin-top:35px" src="<?php echo base_url('assets/images/products/').$product_image_1; ?>">
+      			<img class="img-responsive center-block" style="margin-bottom: 35px; margin-top:35px" src="<?php echo base_url('assets/images/products/').$product_image_1; ?>">
       		<?php } ?>
       	
       	</div>
-        <div class="col-lg-8">
+        <div class="col-lg-7">
             <div class="info">
               <p class="f-gotham-bold"><?php echo $product_title; ?></p>
-              <p></p>
+
+              <p> <?php
+                  if($uom !== ' - '){ ?>
+                      UOM : <?php echo $uom; ?> 
+                  <?php  } ?>
+              </p>
               <p class="title-desc" style="margin-bottom:0px;"><strong>Description :</strong></p>
               <p class="text-desc">
                 <?php echo $product_descrption; ?>
@@ -76,7 +81,10 @@ foreach($product->result() as $row){
                     <a href="<?php echo base_url('product/detail/').$rpr->product_slug.'/'.$rpr->category_url.'/'.$rpr->product_id;; ?>">
                       <p class="title"><strong><?php echo $rpr->product_title; ?></strong></p>
                       <p class="desc"><?php echo $rpr->product_descrption; ?></p>
-                      <p class="uom">UOM  : 10KG</p>
+                      <p class="uom"><?php if($uom !== ' - '){ ?>
+                      UOM : <?php echo $uom; ?> 
+                      <?php  } ?>
+                      </p>
                     </a>
                     <a href="#" class="add-to-cart1">Add To Cart</a>
                   </div>
