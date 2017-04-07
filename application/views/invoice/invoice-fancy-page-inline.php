@@ -25,7 +25,7 @@
   <body style="position:relative;width:21cm;height:29.7cm;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;color:#555555;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;font-family:SourceSansPro;font-size:10px;" >
     <header class="clearfix" style="padding-top:10px;padding-bottom:10px;padding-right:0;padding-left:0;margin-bottom:20px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#AAAAAA;font-size:14px;" >
       <div id="logo" style="float:left;width:45%;margin-top:8px;" >
-        <img src="<?=base_url("assets/image/logo-besha.jpg")?>" style="height:70px;" >
+        <img src="<?=base_url("assets/images/indocart-logo-web.png")?>" >
         
       </div>
       <div id="company" style="float:right;width:55%;text-align:right;" >
@@ -45,7 +45,7 @@
           <div class="email"><a href="<?=$email ?>" style="color:#0087C3;text-decoration:none;" ><?=$email ?></a></div>
         </div>
         <div id="invoice" style="float:right;text-align:right;width:45%;" >
-          <h1 style="color:#0087C3;font-size:2.4em;line-height:1em;font-weight:normal;margin-top:0;margin-bottom:0;margin-right:;margin-left:10px;" >SURAT PENAWARAN SPAREPART</h1>
+          <h1 style="color:#0087C3;font-size:2.4em;line-height:1em;font-weight:normal;margin-top:0;margin-bottom:0;margin-right:;margin-left:10px;" >SURAT PENAWARAN HARGA</h1>
           <div class="date" style="font-size:1.1em;color:#777777;" >Date of Invoice: <?=$create_date?></div>
           <div class="date" style="font-size:1.1em;color:#777777;" >Due Date: <?=$due_date?></div>
         </div>
@@ -60,24 +60,26 @@
         </thead>
         <tbody>
           <?php
+            $i = 0;
       		    foreach($this->cart->contents() as $items)
     			{
 				    $detail_product = $this->model_product->getproductfromID($items['id']);
 		      ?>
           <tr>
-            <td class="" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;background-color:#EEEEEE;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#FFFFFF;text-align:right;" >
+            <td class="" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;background-color:#EEEEEE;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#FFFFFF;text-align:center;" >
             <img  src="<?=check_image_product($items['id'])?>" width="100" height="100" /></td>
-            <td class="desc" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;background-color:#EEEEEE;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#FFFFFF;text-align:left;" ><?=$items["code"]?> / <?=$detail_product->product_detail?></td>
-            <td class="qty" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;background-color:#EEEEEE;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#FFFFFF;text-align:right;font-size:1.2em;" ><?=$items["qty"]?> </td>
+            <td class="desc" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;background-color:#EEEEEE;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#FFFFFF;text-align:center;" ><?=$detail_product->product_detail?></td>
+            <td class="qty" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;background-color:#EEEEEE;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#FFFFFF;text-align:center;font-size:1.2em;" ><?=$items["qty"]?> </td>
           </tr>
           <?php
+           $i++;
 			       }
 		      ?>
         </tbody>
         <tfoot>
           <tr>
             <td colspan="2" style="border-bottom-width:1px;border-bottom-color:#FFFFFF;text-align:right;padding-top:10px;padding-bottom:10px;padding-right:20px;padding-left:20px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-style:none;font-size:1.2em;white-space:nowrap;border-top-width:1px;border-top-style:solid;border-top-color:#AAAAAA;" ></td>
-            <td colspan="2" style="border-bottom-width:1px;border-bottom-color:#FFFFFF;text-align:right;padding-top:10px;padding-bottom:10px;padding-right:20px;padding-left:20px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-style:none;font-size:1.2em;white-space:nowrap;border-top-width:1px;border-top-style:solid;border-top-color:#AAAAAA;" >SUBTOTAL</td>
+            <td colspan="2" style="border-bottom-width:1px;border-bottom-color:#FFFFFF;text-align:right;padding-top:10px;padding-bottom:10px;padding-right:20px;padding-left:20px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-style:none;font-size:1.2em;white-space:nowrap;border-top-width:1px;border-top-style:solid;border-top-color:#AAAAAA;" >SUBTOTAL : <?php echo $i; ?></td>
           </tr>
           <tr>
             <td colspan="2" style="border-bottom-width:1px;border-bottom-color:#FFFFFF;text-align:right;padding-top:10px;padding-bottom:10px;padding-right:20px;padding-left:20px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-bottom-style:none;font-size:1.2em;white-space:nowrap;border-top-width:1px;border-top-style:solid;border-top-color:#AAAAAA;" >

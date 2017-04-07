@@ -1358,7 +1358,7 @@ form{
 }
 form input, form textarea{
     border:1px solid #eaeaea;
-    color:#d0d0d0;
+    color:#000;
     float:left;
     font-family:cabin;
     font-size:13px;
