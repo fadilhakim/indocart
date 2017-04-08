@@ -3,7 +3,7 @@
 	
 		<div id="owl-demo" class="owl-carousel">
 			<?php foreach ($slider as $s) { ?>
-			 <div><img src="<?php echo sprintf("assets/images/slider/". $s->silder_image) ?> "></div>
+			 <div class="item"><img src="<?php echo sprintf("assets/images/slider/". $s->silder_image) ?> "></div>
 			<?php } ?>
 		</div>
 				

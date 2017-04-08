@@ -7,7 +7,7 @@
 					<a class="sidemenu-btn fa fa-bars" href="#" title=""></a>
 				</div>
 				<div class="logo-indo">
-					<img src="<?php echo base_url('assets/images/indocart-logo-web.png'); ?>">
+					<img src="<?php echo base_url('assets/images/logo_indocart.png'); ?>">
 				</div>
 			</div>
 			<div class="col-lg-6" style="position:relative">

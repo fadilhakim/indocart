@@ -21,6 +21,7 @@ class cart extends CI_Controller { // Our Cart class extends the Controller clas
 	     	$name = $this->input->post('product_name');
 	     	$manu = $this->input->post('product_category');
 	     	$desc = $this->input->post('product_desc');
+	     	$uom = $this->input->post('uom');
 	     	$id_ajak = $this->input->post('ajax');
 	     	
 	    	foreach ($getrow['getcart'] as $row)
@@ -33,6 +34,7 @@ class cart extends CI_Controller { // Our Cart class extends the Controller clas
 			        'name'    => $name,
 			        'image'   => $image,
 			        'desc'   => $desc,
+			        'uom'   => $uom,
 			        'manu' => $manu
 			        /*'options' => array('image' => $image , 'code' => $product_code , 'manu' => $manu)*/
 			);

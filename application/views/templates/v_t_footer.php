@@ -5,7 +5,7 @@
 			<div class="col-lg-6">
 				<p style="font-size:14px;">BSD : 021 5315-8800 (Hunting)</p>
 				<p style="font-size:14px;">MANGGA DUA : 021 612 7270 | 021 6220 2664</p>
-        <p style="font-size:14px;">HI-TECH MALL : 0813 9835 5678</p>
+        <p style="font-size:14px;">Hi-Tech Mall Surabaya: 0822 575757 88</p>
 				<p style="font-size:14px;">indocart@indosat.net.id</p><br>
 				<a href=""  data-toggle="modal" data-target="#myModal" class="subscribe">Subscribe our latest promo & Deals</a>
 				<p style="font-size:11px;">&copy; All right reserved - indocart</p>
@@ -87,12 +87,12 @@
         autoPlay : 3000,
         stopOnHover : true,
         navigation:true,
-        paginationSpeed : 1000,
+        paginationSpeed : 2000,
         goToFirstSpeed : 2000,
         singleItem : true,
         autoHeight : true,
-        transitionStyle:"fade",
-        responsiveClass:true,
+        // transitionStyle:"fade",
+        // responsiveClass:true,
       });
     });
 

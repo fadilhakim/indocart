@@ -31,7 +31,7 @@
                          <tr>
                             <td class="product-code"><strong><?php echo $items['name']; ?></strong></td>
                             <td class="product-code"><?php echo $items['desc']; ?></td>
-                            <td class="product-code"><?php //echo $items['name']; ?></td>
+                            <td class="product-code"><?php echo $items['uom']; ?></td>
                             <td class="product-code">
                               <input name="qty[]" value="<?php echo  $items['qty'] ?>">
                             </td>

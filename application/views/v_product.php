@@ -24,7 +24,10 @@
             <div class="thumbnail">
               
               <a href="<?php echo base_url('product/detail/').$p->product_slug.'/'.$p->category_url.'/'.$p->product_id; ?>">
-              <div style="width:100%; max-height:260px; overflow:hidden;">
+              <div style="width:100%; max-height:260px; overflow:hidden; positon:relative;">
+                <?php if($p->hotpromo != 0) { ?>
+                  <img class="img-responsive hot-promos" style="margin-bottom:0px;" src="<?php echo base_url('assets/images/products/hot-promo.png')?>">
+                <?php } ?>
                 <?php if($p->product_image_1 == '') { ?>
                     <img class="img-responsive center-block" style="margin-bottom:0px;" src="<?php echo base_url('assets/images/no-image.png')?>">
                 <?php }else { ?>
@@ -41,7 +44,7 @@
                         };  
                     ?>
                   </p>
-                  <span style="padding-left:5%; display:block; min-height:50px;">
+                  <span style="padding-left:5%; display:block; height:60px;  overflow:hidden;">
                       <?php echo $p->product_descrption; ?>
                   </span>
                   <span> 

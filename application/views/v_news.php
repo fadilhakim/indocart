@@ -58,7 +58,7 @@
 
                 <!-- Blog Categories Well -->
                 <div class="well">
-                    <h4>News</h4>
+                    <h4>Popular News</h4>
                     <div class="row">
                         <div class="col-lg-12">
                             <ul class="list-unstyled">

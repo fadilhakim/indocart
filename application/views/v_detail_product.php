@@ -37,7 +37,7 @@ foreach($product->result() as $row){
 
               <p> <?php
                   if($uom !== ' - '){ ?>
-                      UOM : <?php echo $uom; ?> 
+                      <strong>UOM</strong> : <?php echo $uom; ?> 
                   <?php  } ?>
               </p>
               <p class="title-desc" style="margin-bottom:0px;"><strong>Description :</strong></p>
@@ -54,6 +54,7 @@ foreach($product->result() as $row){
                       <input type="hidden" name="product_name" value="<?php echo  $product_title; ?>">
                       <input type="hidden" name="product_image" value="<?php echo $product_image_1?>">
                       <input type="hidden" name="product_desc" value="<?php echo  $product_descrption ?>">
+                      <input type="hidden" name="uom" value="<?php echo $uom ?>">
                       <input type="hidden" name="product_category" value="<?php echo  $product_category ?>">
                       <input type="submit" class="add-to-cart1" value="Add To Cart">
                   <?php echo form_close(); ?>

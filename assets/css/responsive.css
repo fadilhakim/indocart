@@ -1,4 +1,9 @@
 @media (max-width: 1200px) {
+
+	.line-hot {
+			width:80%;
+			padding-right:0px !important;
+	}
 	.container {
 	    padding-left: 20px;
 	    padding-right: 20px;
@@ -22,7 +27,9 @@
 		padding:40px 15px 50px 15px;
 		border:none;
 	}
-
+	.list-view tbody form .cart-icon {
+		right: 140px;
+	}
 	.header input {
 		float: none;
 		margin-top: 15px;

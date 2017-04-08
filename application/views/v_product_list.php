@@ -33,7 +33,11 @@
 			    <tbody>
 			    	<?php foreach ($product as $p) { ?>
 			    	<tr>
-			    		<td><p><?php echo $p->product_title; ?></p></td>
+			    		<td><p><?php echo $p->product_title; ?></p>
+			    			<?php if($p->hotpromo != 0) { ?>
+			    				<p class="line-hot">Hot Promo</p>
+			    			<?php } ?>
+			    		</td>
 			    		<td>
                            <?php echo $p->uom; ?>
 			    		</td>
