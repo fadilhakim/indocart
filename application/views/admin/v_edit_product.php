@@ -9,6 +9,7 @@
       $product_desc=$row->product_descrption;
       $product_code=$row->product_code;
       $product_category=$row->product_category;
+      $category_url=$row->category_url;
       $hotpromo=$row->hotpromo;
       $product_image_1=$row->product_image_1;
 
@@ -42,9 +43,9 @@
                                         <label class="col-sm-3 control-label" style="text-align:left;">Product Category</label>
                                         <div class="col-sm-9">
                                             <select class="form-control" name="product_category">
-                                                <option selected="selected" value="<?php echo $product_category; ?>"><?php echo $product_category; ?></option>
+                                                <option selected="selected" value="<?php echo $category_url; ?>"><?php echo $product_category; ?></option>
                                                 <?php foreach ($category as $c) { ?> 
-                                                    <option value="<?php echo $c->category_title; ?>"><?php echo $c->category_title; ?></option>
+                                                    <option value="<?php echo $c->category_url; ?>"><?php echo $c->category_title; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>

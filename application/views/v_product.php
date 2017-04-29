@@ -44,7 +44,12 @@
                         };  
                     ?>
                   </p>
-                  <span style="padding-left:5%; display:block; height:60px;  overflow:hidden;">
+                  <style type="text/css">
+                    .pdalamp p {
+                      font-family: cabin !important; font-size: 13px !important; line-height: 27px !important;
+                    }
+                  </style>
+                  <span class="pdalamp" style="padding-left:5%; display:block; height:60px;  overflow:hidden; font-family: cabin !important; line-height: 27px;">
                       <?php echo $p->product_descrption; ?>
                   </span>
                   <span> 

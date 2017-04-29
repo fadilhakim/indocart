@@ -12,6 +12,14 @@ class Model_product extends CI_Model {
 			return $product;
 		}
 
+		public function getproductfromSLUGandcat($slug , $cat){
+
+		$getslugproduct = $this->db->get_where('product_tbl',array('category_url' => $slug , 'product_slug' => $cat ));
+
+		return $getslugproduct;
+
+		}
+
 		public function list_category() {
 
 			$category = $this->db->get('category_tbl');
@@ -108,15 +116,22 @@ class Model_product extends CI_Model {
 
    		public function count_product_by_cat($cat) {
 
-			$query = $this->db->where('category_url', $cat)->get('product_tbl');
-			return $query->num_rows();
+			// $query = $this->db->where('category_url', $cat)->get('product_tbl');
+			// return $query->num_rows();
+
+			$this->db->select('*');
+       		$this->db->from('product_tbl');
+	        $this->db->where('category_url',$cat);
+	        $query = $this->db->get();
+	        return  $query->num_rows();
+
 		}
 
-   		public function fetch_product_by_category($cat , $limit, $start = 0) {
+   		public function fetch_product_by_category($cat , $limit, $start) {
   	 		$this->db->select('*');
        		$this->db->from('product_tbl');
 	        $this->db->where('category_url',$cat);
-
+	        // $this->db->order_by("product_id","asc");
 	        $this->db->limit($limit, $start);
 	        // echo  $this->db->last_query();
 	        // die();

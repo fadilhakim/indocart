@@ -35,7 +35,7 @@ class product extends CI_Controller {
 		$config = array();
         $config["base_url"] = base_url() . "/product/".$cat;        
         $config["total_rows"] = $this->model_product->count_product_by_cat($cat);
-        $this->model_product->count_product_by_cat($cat) ;
+        // $this->model_product->count_product_by_cat($cat) ;
 
 		// Use pagination number for anchor URL.
 		$config['use_page_numbers'] = TRUE;
@@ -68,9 +68,17 @@ class product extends CI_Controller {
 
         $this->pagination->initialize($config);
 
-        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $uri_page = $this->uri->segment(3);
 
-        $data["product"] = $this->model_product->fetch_product_by_category($cat ,$limit, $page);
+        if($uri_page == null) {
+        	$page = 1;
+        }
+        else {
+        	$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        }
+        $start = ( $page * $limit ) - $limit + 1;
+
+        $data["product"] = $this->model_product->fetch_product_by_category($cat ,$limit, $start);
         $data["links"] = $this->pagination->create_links();
 
 		$this->load->view('templates/v_t_meta');
@@ -121,9 +129,18 @@ class product extends CI_Controller {
 
         $this->pagination->initialize($config);
 
-        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $uri_page = $this->uri->segment(3);
+        
+        if($uri_page == null) {
+        	$page = 1;
+        }
+        else {
+        	$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        }
+        $start = ( $page * $limit ) - $limit + 1;
 
-        $data["product"] = $this->model_product->fetch_product_by_category($cat ,$limit, $page);
+
+        $data["product"] = $this->model_product->fetch_product_by_category($cat ,$limit, $start);
         $data["links"] = $this->pagination->create_links();
 
 		$this->load->view('templates/v_t_meta');

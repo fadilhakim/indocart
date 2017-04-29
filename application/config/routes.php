@@ -53,9 +53,10 @@ $route['admin/delete/news/(:num)'] = 'delete/delete_news';
 
 
 //edit view
-$route['admin/edit/product/(:any)/(:any)'] = 'admin/edit_product/$1/$2';
+$route['admin/edit_product/(:any)/(:any)'] = 'admin/edit_product/$1/$2';
 $route['admin/edit/news/(:num)'] = 'admin/edit_news/$1';
 $route['admin/edit/slider/(:num)'] = 'admin/edit_slider/$1';
+
 
 //edit function
 $route['admin/edit/slider_f'] = 'update/update_slider';
