@@ -109,6 +109,27 @@
 	.home-container .recycle p  {
 		padding-left: 10px;
 	}
+
+	.whyblue .kiriblue img {
+		display: none;
+	}
+
+	.whyblue .col-lg-11 {
+		border-bottom:2px solid  #fff;
+		border-left:2px solid  #fff;
+	}
+
+	.whyblue .whydot {
+		display: none !important;
+	}
+
+	.whyblue .wave {
+		display: none !important;
+	}
+	.whyblue h1 {
+		font-size: 30px;
+		padding-left: 15px;
+	}
 }
 
 @media (min-width: 768px) {

@@ -10,7 +10,7 @@ class fundamental extends CI_Controller {
 		$this->load->model('model_home');
 		$data['news'] = $this->model_home->list_news()->result();
 		$data['slider'] = $this->model_home->list_slider()->result();
-		$this->load->view('v_home',$data);
+		$this->load->view('v_home_2',$data);
 		$this->load->view('templates/v_t_footer');
 	}
 

@@ -99,7 +99,7 @@ body {
 	}
 
 	.news-home {
-		margin-top: 50px;
+		margin-top: -20px;
 		background:url('../../assets/images/home/new-bg.png') center no-repeat;
 		background-size:100%;
 		.container {
@@ -829,4 +829,63 @@ body {
 	margin-top:20px;
 	font-size:13px;
 	padding-right:0px !important;
+}
+
+.whyblue {
+	min-height:370px;
+	padding-bottom:15px;
+	.kiriblue {
+		height: 325px;
+		ul {
+			list-style: none;
+			padding-left:0px;
+			margin-top: 20px;
+			li {
+				    padding-left: 15px;
+				    color:#0b6da5;
+				    position:relative;
+				    height: 53px;
+				    img {
+				    	position:absolute;
+				    	left: -35px;
+   						 top: 7px;
+				    }
+			}
+		}
+	}
+	h1 {
+		background-color: #0b6da5;
+    	color: #fff;
+	    font-family: 'gotham-medium';
+	    font-size: 81px;
+	    padding: 0px 0 11px 160px;
+	    position: relative;
+	    margin-bottom: 0px;
+		span.wave{
+			display: block;
+			position:absolute;
+			 right: 5%;
+		    top: -41%;
+		    height: 218px;
+		    width: 234px;
+			background:url('../../assets/images/home/whyblue.png') no-repeat;
+		}
+		span.whydot {
+			display: block;
+			position:absolute;
+			height: 100px;
+			width: 155px;
+			left: 0px;
+			background:url('../../assets/images/home/whydot.png') no-repeat;
+		}
+	}
+	.col-lg-11 {
+		border-bottom:2px solid  #0b6da5;
+		border-left:2px solid  #0b6da5;
+	}
+	.kiriblue {
+		p {
+			color: #0b6da5;
+		}
+	}
 }

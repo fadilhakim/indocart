@@ -2,16 +2,13 @@
     <div class="row">
         <div class="row">
             <div class="col-lg-6">
-                <h1 style="text-align:center;" class="f-gotham-medium">Product</h1>
-            </div>
-            <div class="col-lg-6 kerilwil">
-                <img class="" style="margin-right: 20px; margin-top: 5px; float:right;" src="<?php echo base_url('assets/images/product-cat/layer144.png'); ?>" style="float:right;">
+                <h1 class="f-gotham-medium">Product</h1>
             </div>
         </div>
         <?php foreach ($category as $p) { ?>
-    	<div class="col-lg-6" style="margin-bottom:30px;  height:365px;">
+    	<div class="col-lg-4" style="margin-bottom:30px;  height:365px;">
     		<a href="<?php echo base_url('product/').$p->category_url.'/1'; ?>">
-    			<img class="img-responsive center-block" style="" src="<?php echo base_url('assets/images/product-cat/').$p->category_image; ?>">
+    			<img class="img-responsive center-block" style="width: 90%" src="<?php echo base_url('assets/images/product-cat/').$p->category_image; ?>">
     		</a>
     	</div>
         <?php } ?>
@@ -19,9 +16,9 @@
     		<div class="guarantee">
     			<img class="persen" src="<?php echo base_url('assets/images/product-cat/persen.png'); ?>">
     			<h2 class="f-gotham-bold">Mengapa Memilih indocart</h2>
-                <img class="memphis" src="<?php echo base_url('assets/images/product-cat/memphis.png'); ?>">
+                <!-- <img class="memphis" src="<?php echo base_url('assets/images/product-cat/memphis.png'); ?>"> -->
     		</div>
-            <div class="col-lg-12">
+            <div class="col-lg-12" style="margin-top: -10px;">
                 <div class="row option">
             		<div class="col-lg-2">
                         <div class="row">
