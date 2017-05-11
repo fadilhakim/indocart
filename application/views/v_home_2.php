@@ -1,7 +1,7 @@
 <div class="home-container">
 	<div class="container">
 	
-		<div id="owl-demo" class="owl-carousel">
+		<div id="owl-demo" style="padding-bottom: 50px;" class="owl-carousel">
 			<?php foreach ($slider as $s) { ?>
 			 <div class="item"><img src="<?php echo sprintf("assets/images/slider/". $s->silder_image) ?> "></div>
 			<?php } ?>
