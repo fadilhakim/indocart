@@ -1,7 +1,7 @@
 <div class="home-container">
 	<div class="container">
 	
-		<div id="owl-demo" style="padding-bottom: 50px;" class="owl-carousel">
+		<div id="owl-demo"  class="owl-carousel">
 			<?php foreach ($slider as $s) { ?>
 			 <div class="item"><img src="<?php echo sprintf("assets/images/slider/". $s->silder_image) ?> "></div>
 			<?php } ?>
@@ -31,8 +31,8 @@
 							<li><img src="<?php echo base_url('assets/images/home/ul/gedungblue.png'); ?>" class="img-responsive">
 
 							INDOCART merupakan importer berbasis PT  yang memperoleh barang langsung dari pabrik.</li>
-							<li style="padding-top: 15px;"><img src="<?php echo base_url('assets/images/home/ul/tagblue.png'); ?>" class="img-responsive">Harga yang kompetitif.</li>
-							<li style="padding-top: 15px;"><img src="<?php echo base_url('assets/images/home/ul/likeblue.png'); ?>" class="img-responsive">Proses pengerjaan yang cepat, teliti dan baku.</li>
+							<li class="tiga"><img src="<?php echo base_url('assets/images/home/ul/tagblue.png'); ?>" class="img-responsive">Harga yang kompetitif.</li>
+							<li class="dua"><img src="<?php echo base_url('assets/images/home/ul/likeblue.png'); ?>" class="img-responsive">Proses pengerjaan yang cepat, teliti dan baku.</li>
 							<li><img src="<?php echo base_url('assets/images/home/ul/pasirblue.png'); ?>" class="img-responsive">Telah berdiri sejak 2003 dengan layanan purna jual yang responsif, professional dan berkesinambungan.</li>
 						</ul>
 					</div>
@@ -56,24 +56,24 @@
 			</div>
 		</div>
 	</div>
-	<div class="container" style="margin-top: 25px;">
+	<div class="container pilih4" style="margin-top: 25px;">
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-xs-6 col-sm-6">
 				<a href="http://indocart.com//product/Toner_Powder_color/1">
 				<img src="<?php echo base_url('assets/images/home/xerox-dp-c1190s.png'); ?>" class="img-responsive">
 				</a>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-xs-6 col-sm-6">
 				<a href="http://indocart.com/product/Printer_Parts/1">
 				<img src="<?php echo base_url('assets/images/home/printer-partss.png'); ?>" class="img-responsive">
 				</a>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-xs-6 col-sm-6">
 				<a href="http://indocart.com/product">
 				<img src="<?php echo base_url('assets/images/product-cat/inks.png'); ?>" class="img-responsive">
 				</a>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-xs-6 col-sm-6">
 				<a href="http://indocart.com/product">
 				<img src="<?php echo base_url('assets/images/product-cat/printer-seconds.png'); ?>" class="img-responsive">
 				</a>
@@ -111,7 +111,10 @@
 	<div class="container-fluid recycle">
 		<div class="row">
 			<div class="col-lg-5">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-xs-12 horizontal">
+					<h3>recyle</h3>
+				</div>
+				<div class="col-lg-3 vertikal">
 					<img class="img-responsive" src="<?php echo base_url('assets/images/home/rec-bg.png') ?>">
 				</div>
 				<div class="col-lg-9">

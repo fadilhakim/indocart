@@ -844,12 +844,15 @@ body {
 				    padding-left: 15px;
 				    color:#0b6da5;
 				    position:relative;
-				    height: 53px;
+				    min-height: 33px;
 				    img {
 				    	position:absolute;
 				    	left: -35px;
    						 top: 7px;
 				    }
+			}
+			li.dua , li.tiga {
+				padding-top:15px;
 			}
 		}
 	}
@@ -888,4 +891,40 @@ body {
 			color: #0b6da5;
 		}
 	}
+}
+
+#owl-demo {
+	padding-bottom:35px;
+}
+.pilih4 {
+	.col-lg-3 {
+		margin-top: 20px;
+	}
+}
+.recycle {
+	.horizontal {
+		display: none;
+		background-color: #141414;
+		min-height: 70px !important;
+		z-index: 99;
+		color: #fff;
+		h3 {
+			font-family: 'gotham-medium';
+			font-size: 38px;
+			text-align: left;
+			padding:15px;
+		}
+	}
+
+	.col-lg-9 {
+		max-height: 424px;
+
+	}
+}
+.product-list .col-xs-6 {
+	margin-bottom:30px;  height:365px;
+}
+
+.product-list .col-xs-6 img{ 
+	width:90%;
 }

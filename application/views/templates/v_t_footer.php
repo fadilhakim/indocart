@@ -19,20 +19,25 @@
 						</span>
 						<br><br>
 						<span class="f-roboto-reg" style="font-size:11px;">CERTIFIED BY :</span>
-						<br>
+						<br><br>
 					</div>
-					<div class="col-lg-3">
-						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-1.png'); ?>">
-					</div>
-					<div class="col-lg-3">
-						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-2.png'); ?>">
-					</div>
-					<div class="col-lg-3">
-						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-3.png'); ?>">
-					</div>
-					<div class="col-lg-3">
-						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-4.png'); ?>">
-					</div>
+          <div class="col-lg-6" style="padding-left: 0px; height: 50px;">
+  					<div class="col-lg-6 col-xs-6">
+  						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-1.png'); ?>">
+  					</div>
+
+  					<div class="col-lg-6 col-xs-6">
+  						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-2.png'); ?>">
+  					</div>
+          </div>
+          <div class="col-lg-6"  style="padding-left: 0px; height: 50px;">
+  					<div class="col-lg-6 col-xs-6">
+  						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-3.png'); ?>">
+  					</div>
+  					<div class="col-lg-6 col-xs-6">
+  						<img class="img-responsive" src="<?php echo base_url('assets/images/footer-img-4.png'); ?>">
+  					</div>
+          </div>
 				</div>
 			</div>
 		</div>

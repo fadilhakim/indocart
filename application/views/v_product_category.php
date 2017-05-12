@@ -6,13 +6,13 @@
             </div>
         </div>
         <?php foreach ($category as $p) { ?>
-    	<div class="col-lg-4" style="margin-bottom:30px;  height:365px;">
+    	<div class="col-lg-4 col-xs-6">
     		<a href="<?php echo base_url('product/').$p->category_url.'/1'; ?>">
-    			<img class="img-responsive center-block" style="width: 90%" src="<?php echo base_url('assets/images/product-cat/').$p->category_image; ?>">
+    			<img class="img-responsive center-block" src="<?php echo base_url('assets/images/product-cat/').$p->category_image; ?>">
     		</a>
     	</div>
         <?php } ?>
-    	<div class="col-lg-12">
+    	<div class="col-lg-12 col-xs-12">
     		<div class="guarantee">
     			<img class="persen" src="<?php echo base_url('assets/images/product-cat/persen.png'); ?>">
     			<h2 class="f-gotham-bold">Mengapa Memilih indocart</h2>

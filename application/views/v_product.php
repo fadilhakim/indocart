@@ -20,7 +20,7 @@
         <?php } ?>
 
         <?php foreach ($product as $p) { ?>
-    	<div class="col-lg-3">
+    	<div class="col-lg-3 col-xs-4">
             <div class="thumbnail">
               
               <a href="<?php echo base_url('product/detail/').$p->product_slug.'/'.$p->category_url.'/'.$p->product_id; ?>">
