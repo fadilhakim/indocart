@@ -6,7 +6,7 @@
             </div>
         </div>
         <?php foreach ($category as $p) { ?>
-    	<div class="col-lg-4 col-xs-6">
+    	<div class="col-lg-4 col-md-4 col-xs-6">
     		<a href="<?php echo base_url('product/').$p->category_url.'/1'; ?>">
     			<img class="img-responsive center-block" src="<?php echo base_url('assets/images/product-cat/').$p->category_image; ?>">
     		</a>

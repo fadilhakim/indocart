@@ -115,7 +115,7 @@
 		padding-top: 90px;
 	}
 	.whyblue .kiriblue {
-		height: 395px;
+		height: 425px;
 	}
 	.product-thumb a {
 		font-size: 12px;
@@ -126,7 +126,7 @@
 	.whyblue .kiriblue img {
 		left: 0px !important;
 		top: 7px !important;
-		width: 11%;
+		width: 33px;
 	}
 	.kiriblue strong {
 		font-size: 17px !important;
@@ -184,7 +184,7 @@
 	}
 
 	.product-list .col-xs-6 {
-		height: 130px;
+		min-height: 130px;
 	}
 
 	.product-list .col-xs-6 img{ 

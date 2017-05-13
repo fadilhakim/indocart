@@ -5,7 +5,7 @@ a:hover {
 	text-decoration:none;
 }
 body {
-	
+	overflow-y: hidden;
 }
 @font-face {
   font-family: 'gotham-medium';
@@ -922,7 +922,7 @@ body {
 	}
 }
 .product-list .col-xs-6 {
-	margin-bottom:30px;  height:365px;
+	margin-bottom:30px;  min-height:130px;
 }
 
 .product-list .col-xs-6 img{ 
