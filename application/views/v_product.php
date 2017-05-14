@@ -20,7 +20,7 @@
         <?php } ?>
 
         <?php foreach ($product as $p) { ?>
-    	<div class="col-lg-3 col-xs-4">
+    	<div class="col-lg-3 col-xs-6 bb">
             <div class="thumbnail">
               
               <a href="<?php echo base_url('product/detail/').$p->product_slug.'/'.$p->category_url.'/'.$p->product_id; ?>">
@@ -66,7 +66,7 @@
                   <input type="hidden" name="product_name" value="<?php echo  $p->product_title; ?>">
                   <input type="hidden" name="product_image" value="<?php echo $p->product_image_1?>">
                   <input type="hidden" name="product_category" value="<?php echo  $p->product_category ?>">
-                  <input type="submit" class="add-to-cart1" value="Add To Cart">
+                  <a href="<?php echo base_url('product/detail/').$p->product_slug.'/'.$p->category_url.'/'.$p->product_id; ?>" class="add-to-cart1" value="">Add To Cart</a>
               <?php echo form_close(); ?>
             </div>
     	</div>

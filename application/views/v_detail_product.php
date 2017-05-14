@@ -87,7 +87,7 @@ foreach($product->result() as $row){
                       <?php  } ?>
                       </p>
                     </a>
-                    <a href="#" class="add-to-cart1">Add To Cart</a>
+                    <a href="<?php echo base_url('product/detail/').$rpr->product_slug.'/'.$rpr->category_url.'/'.$rpr->product_id;; ?>" class="add-to-cart1">Add To Cart</a>
                   </div>
              
               </div>
